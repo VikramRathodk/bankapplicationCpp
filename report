@@ -1,0 +1,12 @@
+Design Choices and Synchronization Mechanisms Used:
+
+The design of the multithreaded bank  application focuses on maintaining data integrity and preventing race conditions during concurrent access to the BankAccount class.
+
+- object-oriented approach:
+    - BankAccount Class: Represents a simple bank account with methods for deposit, withdrawal, and balance retrieval.
+- Threaded Transactions: Multiple threads simulate concurrent transactions (deposits and withdrawals) on the BankAccount.
+
+- Synchronization Mechanisms:
+
+The application employs std::mutex for synchronization, ensuring thread safety while accessing the BankAccount methods. std::lock_guard is utilized to automatically manage locking and unlocking of the mutex, preventing race conditions during concurrent transactions.
+
